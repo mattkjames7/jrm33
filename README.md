@@ -49,7 +49,7 @@ jrm33.Test(R=0.85)
 
 which produces this (based on figure 4 of Connerney et al. 2018):
 
-![jrm09test.png](jrm09test.png)
+![jrm09test.png](jrm33test.png)
 
 ## References
 

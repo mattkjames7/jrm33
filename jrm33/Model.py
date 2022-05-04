@@ -47,12 +47,22 @@ def Model(r,theta,phi,Deg=13):
 	elif n == 1:
 		return _SphHarm(r,theta,phi,Deg)
 	else:
+		#get shape
+		sh = np.shape(r)
+		_r = r.flatten()
+		_t = theta.flatten()
+		_p = phi.flatten()
+		
 		#create output arrays
 		Br = np.zeros(n,dtype='float64')
 		Bt = np.zeros(n,dtype='float64')
 		Bp = np.zeros(n,dtype='float64')
 		for i in range(0,n):
-			Br[i],Bt[i],Bp[i] = _SphHarm(r[i],theta[i],phi[i],Deg)
+			Br[i],Bt[i],Bp[i] = _SphHarm(_r[i],_t[i],_p[i],Deg)
+	
+		#Br = Br.reshape(sh)
+		#Bt = Bt.reshape(sh)
+		#Bp = Bp.reshape(sh)
 	
 		return Br,Bt,Bp
 	
