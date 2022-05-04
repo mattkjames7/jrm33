@@ -6,16 +6,16 @@ def _CoeffGrids():
 	'''
 	This function returns the grids of "g" and "h" coefficients for the 
 	model. If they do not already exist in memory, they are read in from 
-	file and stored in jrm09.Globals
+	file and stored in jrm33.Globals
 	
 	Returns
 	=======
 	g : float
 		2D array of "g" coefficients, shape (MaxDeg+1,MaxDeg+1), where
-		MaxDeg = 10 for JRM09.
+		MaxDeg = 33 for JRM33.
 	h : float
 		2D array of "h" coefficients, shape (MaxDeg+1,MaxDeg+1), where
-		MaxDeg = 10 for JRM09.
+		MaxDeg = 33 for JRM33.
 	
 	'''
 	#check if we have loaded them yet

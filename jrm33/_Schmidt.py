@@ -1,7 +1,7 @@
 import numpy as np
 from . import Globals
 
-def _Schmidt(MaxDeg=10):
+def _Schmidt(MaxDeg=33):
 	'''
 	Calculate the Schmidt normalization parameters for each n,m 
 	combination.
