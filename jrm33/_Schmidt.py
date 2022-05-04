@@ -1,7 +1,7 @@
 import numpy as np
 from . import Globals
 
-def _Schmidt(MaxDeg=33):
+def _Schmidt(MaxDeg=13):
 	'''
 	Calculate the Schmidt normalization parameters for each n,m 
 	combination.
@@ -26,7 +26,7 @@ def _Schmidt(MaxDeg=33):
 	Snm = np.zeros((MaxDeg+1,MaxDeg+1),dtype='float64') + np.nan
 	
 	#list a bunch of factorials from 0 to (n+m)!
-	facts = np.append(1,np.cumprod(np.arange(2*MaxDeg)+1))
+	facts = np.append(1,np.cumprod(np.float64(np.arange(2*MaxDeg)+1)))
 
 	#fill the output array
 	for n in range(0,MaxDeg+1):

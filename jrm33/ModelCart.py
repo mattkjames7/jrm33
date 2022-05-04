@@ -42,7 +42,7 @@ def ModelCart(x,y,z,Deg=13):
 	phi = (np.arctan2(y,x) + (2*np.pi)) % (2*np.pi)
 	
 	#call the model
-	Br,Bt,Bp = Model(r,theta,phi,MaxDeg)
+	Br,Bt,Bp = Model(r,theta,phi,Deg)
 
 	#convert to Cartesian (hopefully correctly...)
 	cost = np.cos(theta)

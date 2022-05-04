@@ -1,7 +1,7 @@
 import numpy as np
 from ._SphHarm import _SphHarm
 
-def Model(r,theta,phi,MaxDeg=13):
+def Model(r,theta,phi,Deg=13):
 	'''
 	JRM33 Magnetic field model (see Connerney et al 2022 below). The 
 	model uses right-handed System III coordinates (I think). 

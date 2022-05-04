@@ -4,7 +4,7 @@ from ._Legendre import _Legendre
 from ._Schmidt import _Schmidt
 
 
-def _SphHarmScalar(r,theta,phi,Deg=13):
+def _SphHarm(r,theta,phi,Deg=13):
 	'''
 	This function calculates the JRM33 model field using spherical
 	harmonics. 
@@ -74,7 +74,7 @@ def _SphHarmScalar(r,theta,phi,Deg=13):
 	if np.isfinite(sintheta1) == False:
 		sintheta1 = 0.0
 	C = r1*r1
-	for n in range(1,MaxDeg+1):
+	for n in range(1,Deg+1):
 		#define the constant (a/r)**(n+2)
 		C = C*r1
 
