@@ -44,7 +44,7 @@ def _Legendre(theta,Deg=13):
 				Pnm[n,m] = n21*sintheta*Pnm[n1,m1]
 				dPnm[n,m] = n21*(costheta*Pnm[n1,m1] + sintheta*dPnm[n1,m1])
 			else:
-				nm1 = n + m + 1
+				nm1 = n + m - 1
 				d1nm = 1.0/(n-m)
 				n2 = n - 2
 				Pnm[n,m] = d1nm*(costheta*n21*Pnm[n1,m] - nm1*Pnm[n2,m])
