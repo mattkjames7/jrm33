@@ -27,13 +27,13 @@ def _ReadCoeffs():
 	fname = Globals.ModulePath + '/__data/coeffs.dat'
 	
 	#read it in
-	coef = pf.ReadASCIIData(fname,Header=False,dtype=[('gh','U1'),('n','int32'),('m','int32'),('coef','float32')])
+	coef = pf.ReadASCIIData(fname,Header=False,dtype=[('gh','U1'),('n','int32'),('m','int32'),('coef','float64')])
 	
 	#create the output object
 	dtype = [	('n','int32'),
 				('m','int32'),
-				('g','float32'),
-				('h','float32')]
+				('g','float64'),
+				('h','float64')]
 	k = coef.n.max()
 	n = np.sum(np.arange(k)+2)
 	out = np.recarray(n,dtype=dtype)

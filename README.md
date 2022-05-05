@@ -31,7 +31,7 @@ The model accepts right-handed System III coordinates either in Cartesian form (
 ```python
 import jrm33
 
-#get some Cartesian field vectors (MaxDeg keyword is optional)
+#get some Cartesian field vectors (Deg keyword is optional)
 Bx,By,Bz = jrm33.ModelCart(x,y,z,Deg=13)
 
 #or spherical polar ones
