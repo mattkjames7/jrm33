@@ -1,5 +1,5 @@
 import numpy as np
-from ._SphHarm import _SphHarm
+from ._SphHarm import _SphHarm,_SphHarmArr
 
 def Model(r,theta,phi,Deg=13):
 	'''
@@ -53,17 +53,7 @@ def Model(r,theta,phi,Deg=13):
 		_t = theta.flatten()
 		_p = phi.flatten()
 		
-		#create output arrays
-		Br = np.zeros(n,dtype='float64')
-		Bt = np.zeros(n,dtype='float64')
-		Bp = np.zeros(n,dtype='float64')
-		for i in range(0,n):
-			Br[i],Bt[i],Bp[i] = _SphHarm(_r[i],_t[i],_p[i],Deg)
-	
-		#Br = Br.reshape(sh)
-		#Bt = Bt.reshape(sh)
-		#Bp = Bp.reshape(sh)
-	
+		Br,Bt,Bp = _SphHarmArr(_r,_t,_p,Deg)
 		return Br,Bt,Bp
 	
 

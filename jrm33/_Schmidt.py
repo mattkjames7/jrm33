@@ -1,16 +1,12 @@
 import numpy as np
 from . import Globals
 
-def _Schmidt(MaxDeg=13):
+def _Schmidt():
 	'''
 	Calculate the Schmidt normalization parameters for each n,m 
 	combination.
 	
-	Inputs
-	======
-	MaxDeg : int
-		Maximum degree of the model
-		
+
 	Returns
 	=======
 	Snm : float
@@ -19,10 +15,12 @@ def _Schmidt(MaxDeg=13):
 	
 	
 	'''
-	if MaxDeg in list(Globals.Snm.keys()):
-		return Globals.Snm[MaxDeg]
+	if not Globals.Snm is None:
+		return Globals.Snm
+	
 	
 	#output matrix
+	MaxDeg = Globals.MaxDeg
 	Snm = np.zeros((MaxDeg+1,MaxDeg+1),dtype='float64') + np.nan
 	
 	#list a bunch of factorials from 0 to (n+m)!
@@ -38,5 +36,5 @@ def _Schmidt(MaxDeg=13):
 			Snm[n,m] = np.sqrt(delta*((facts[n-m]/facts[n+m])))
 			
 	#save in globals
-	Globals.Snm[MaxDeg] = Snm
+	Globals.Snm = Snm
 	return Snm

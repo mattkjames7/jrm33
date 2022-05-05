@@ -24,9 +24,7 @@ def _CoeffGrids():
 	
 	
 	#read the file with the coefficients in first
-	if Globals.coeffs is None:
-		Globals.coeffs = _ReadCoeffs()
-	coeffs = Globals.coeffs
+	coeffs = _ReadCoeffs()
 	
 	#create the grids (n,n) shape
 	MaxDeg = np.max(coeffs.n)
@@ -40,6 +38,7 @@ def _CoeffGrids():
 	#add to globals
 	Globals.g = g
 	Globals.h = h
+	Globals.MaxDeg = MaxDeg
 	
 	return g,h
 	
