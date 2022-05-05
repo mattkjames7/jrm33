@@ -12,7 +12,7 @@ def getversion():
 	'''
 	#get the init file path
 	thispath = os.path.abspath(os.path.dirname(__file__))+'/'
-	initfile = thispath + 'jrm09/__init__.py'
+	initfile = thispath + 'jrm33/__init__.py'
 	
 	#read the file in
 	f = open(initfile,'r')
@@ -31,14 +31,14 @@ def getversion():
 version = getversion()
 
 setuptools.setup(
-    name="jrm09",
+    name="jrm33",
     version=version,
     author="Matthew Knight James",
     author_email="mattkjames7@gmail.com",
-    description="Python implementation of the JRM09 model",
+    description="Python implementation of the JRM33 model",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/mattkjames7/jrm09",
+    url="https://github.com/mattkjames7/jrm33",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
