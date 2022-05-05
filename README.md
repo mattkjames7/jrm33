@@ -1,6 +1,6 @@
 # jrm33
 
-JRM33 model (Connerney et al. 2033) implementation using Python.
+JRM33 model (Connerney et al. 2022) implementation using Python.
 
 ## Installation
 
